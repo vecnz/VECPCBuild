@@ -1,7 +1,5 @@
-@echo off
+@echo on
 
-powershell Set-ExecutionPolicy RemoteSigned -y
+powershell choco upgrade all -y
 
-powershell Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
-
-powershell choco install googlechrome steam origin discord vlc 7zip.install -y
+powershell choco install googlechrome steam origin vlc 7zip.install -y
